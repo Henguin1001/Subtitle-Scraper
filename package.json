@@ -1,6 +1,6 @@
 {
   "name": "subtitle_scraper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "finds a way to get the subtitles from a given youtube video",
   "main": "index.js",
   "dependencies": {

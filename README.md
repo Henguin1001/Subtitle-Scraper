@@ -55,3 +55,6 @@ The results from xml2js:
     }
   }
 ```
+
+###Note:
+This module could stop working at any time really. If youtube changed the variable name of "ttsurl" to something like "banana" it would surely be useless.
