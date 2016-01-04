@@ -19,6 +19,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/Henguin1001/Subtitle-Scraper"
+  },
   "author": "Henry Troutman",
   "license": "ISC"
 }
