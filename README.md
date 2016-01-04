@@ -6,7 +6,7 @@ The youtube api was being less of an API and more of a lamePI, so I created this
  npm install subtitle_scraper
 ```
 ###Example
-The module is very simple and hopefully self-explanitory based on this Example
+The module is very simple and hopefully self-explanitory based on this Example (using an [Applied Science](https://www.youtube.com/watch?v=9XQfYKYO380 "Making DIY gecko tape") Video, check it out if you have time)
 
 ```js
 var subtitle_scraper = require('./index.js');
