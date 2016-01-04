@@ -55,6 +55,24 @@ The results from xml2js:
     }
   }
 ```
+##bulk
+It doesn't save any time, but this function allows you to get subtitles from a list of video ids.
+The function works just the same as before except with an array instead of a simple string and an options object is required
+
+Here is an example:
+
+```js
+var subtitle_scraper = require('./index.js');
+// It is also possible now to provide a list of ids to get the subtitles for each
+// a delay can be provide and probably should be
+subtitle_scraper(["9XQfYKYO380", "KAm7qAKAXwI", "cwN983PnJoA"], { delay: 2000 }, function(err, arr){
+  //arr contains an array of the same type of results as with the simple request in their respective order
+  console.log(arr);
+});
+```
+
+"options" can currently only provide a delay option. "delay" will result in a delay between requests
+
 
 ###Note:
 This module could stop working at any time really. If youtube changed the variable name of "ttsurl" to something like "banana" it would surely be useless.

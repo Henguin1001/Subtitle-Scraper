@@ -7,7 +7,8 @@
 */
 
 var request = require('request'),
-    parseString = require('xml2js').parseString;
+  async = require('async'),
+  parseString = require('xml2js').parseString;
 
 var timedTextRegex = /"ttsurl":\s*"(.*?)"/gi;
 
@@ -34,4 +35,21 @@ function scrape(id, cb){
     } else cb(error);
   });
 }
-module.exports = scrape;
+//options can contain a time variable to limit requests
+function scrapeBulk(ids, options, fncb){
+  async.map(ids, function(id, ascb){
+    if(!options.delay) options.delay = 1;
+    setTimeout(function(){
+      scrape(id, ascb);
+    }, options.delay);
+  }, fncb);
+}
+
+// if it is bulk than arg_1 holds options instead of the callback
+module.exports = function(id, arg_1, arg_2){
+  if(id.isArray()){
+    scrape(id, arg_1, arg_2);
+  } else {
+    scrapeBulk(id, arg_1);
+  }
+};

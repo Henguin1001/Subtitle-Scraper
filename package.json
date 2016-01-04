@@ -4,11 +4,16 @@
   "description": "finds a way to get the subtitles from a given youtube video",
   "main": "index.js",
   "dependencies": {
+    "async": "^1.5.1",
     "request": "^2.67.0",
     "xml2js": "^0.4.15"
   },
-  "keywords":[
-    "subtitle","subtitles", "caption", "captions", "youtube"
+  "keywords": [
+    "subtitle",
+    "subtitles",
+    "caption",
+    "captions",
+    "youtube"
   ],
   "devDependencies": {},
   "scripts": {
