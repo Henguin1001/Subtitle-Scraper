@@ -1,11 +1,11 @@
-#subtitle_scraper
-The youtube api was being less of an API and more of a lamePI, so I created this. A module that will give you the captions/subitiles of a youtube video given the id
+# subtitle_scraper
+The youtube api was being less of an API only allows limited access, so I created this. A module that will give you the captions/subitiles of a youtube video given the id
 
-##Install
+## Install
 ```
  npm install subtitle_scraper
 ```
-###Example
+### Example
 The module is very simple and hopefully self-explanitory based on this Example (using an [Applied Science](https://www.youtube.com/watch?v=9XQfYKYO380 "Making DIY gecko tape") Video, check it out if you have time)
 
 ```js
@@ -41,7 +41,7 @@ Youtube will give data like so
   </text>
 </transcript>
 ```
-The module uses xml2js to parse the xml. If you think there is a better option feel free to do what you want with that information.
+The module uses xml2js to parse the xml. If you think there is a better option feel free to make modifications.
 The results from xml2js:
 
 ```json
@@ -55,7 +55,7 @@ The results from xml2js:
     }
   }
 ```
-##Bulk
+## Bulk Request
 It doesn't save any time, but this function allows you to get subtitles from a list of video ids.
 The function works just the same as before except with an array instead of a simple string and an options object is required
 
@@ -74,5 +74,5 @@ subtitle_scraper(["9XQfYKYO380", "KAm7qAKAXwI", "cwN983PnJoA"], { delay: 2000 },
 "options" can currently only provide a delay option. "delay" will result in a delay between requests
 
 
-###Note:
+### Note:
 This module could stop working at any time really. If youtube changed the variable name of "ttsurl" to something like "banana" it would surely be useless.
